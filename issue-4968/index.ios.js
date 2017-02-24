@@ -12,19 +12,14 @@ import {
   View
 } from 'react-native';
 
+import shared from '4968-shared';
+
 export default class Issue4968 extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
+            {shared}
         </Text>
       </View>
     );
