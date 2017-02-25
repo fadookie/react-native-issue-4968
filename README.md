@@ -7,7 +7,7 @@ Reproduction was achieved with a local package one level up from the main app (t
 1. Clone this repo
 2. `cd issue-4968`
 3. `npm install`
-4. `react-native run-ios`
+4. `react-native run-ios` and/or `react-native run-android`
 5. Observe app loads normally
 6. `npm run refresh-shared` (this deletes and re-installs the `4968-shared` package) 
 7. Reload app
@@ -17,6 +17,8 @@ Reproduction was achieved with a local package one level up from the main app (t
 
 ## Actual
 Error occurs during reload:
+
+iOS:
 
 ```
 Unable to resolve module 4968-shared from /Users/eliot/Dev/pear/react-native-issue-4968/issue-4968/index.ios.js: Module does not exist in the module map or in these directories:
@@ -43,6 +45,9 @@ main
 start
 0x0
 ```
+
+Android:
+![AndroidError](android_error.png)
 
 ## Additional info
 Restarting the packager seems to fix the issue until the next `npm run refresh-shared`.
